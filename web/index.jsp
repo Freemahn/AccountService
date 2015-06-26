@@ -7,10 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-
-  </body>
+<head>
+    <title>Simple title for index.jsp</title>
+</head>
+<body>
+    Simple <b>body</b> for index.jsp
+</body>
 </html>
