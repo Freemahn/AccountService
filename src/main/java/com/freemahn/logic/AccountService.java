@@ -1,3 +1,5 @@
+package com.freemahn.logic;
+
 /**
  * Created by Freemahn on 26.06.2015.
  */

@@ -1,0 +1,28 @@
+package com.freemahn.DAO;
+
+/**
+ * Created by freeemahn on 27.06.15.
+ */
+
+import com.freemahn.DAO.Impl.AccountServiceImpl;
+import com.freemahn.logic.AccountService;
+
+public class Factory {
+
+    private static AccountService accountService = null;
+    private static Factory instance = null;
+
+    public static synchronized Factory getInstance() {
+        if (instance == null) {
+            instance = new Factory();
+        }
+        return instance;
+    }
+
+    public AccountService getAccountService() {
+        if (accountService == null) {
+            accountService = new AccountServiceImpl();
+        }
+        return accountService;
+    }
+}
