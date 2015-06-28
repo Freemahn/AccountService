@@ -6,7 +6,7 @@ package com.freemahn.entity;
 
 import java.io.Serializable;
 
-public class Account implements Serializable{
+public class Account implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private Integer id;
@@ -14,11 +14,17 @@ public class Account implements Serializable{
 
 
     public Account() {
+        id = null;
         value = null;
     }
 
-    public Account(Account a) {
+    public Account(int id, Long value) {
+        this.id = id;
+        this.value = value;
+    }
 
+    public Account(Account a) {
+        id = a.getId();
         value = a.getValue();
     }
 

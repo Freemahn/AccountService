@@ -17,19 +17,18 @@ public class AccountServlet extends HttpServlet implements AccountService {
         int id = Integer.parseInt(request.getParameter("id"));
         Long value = Long.parseLong(request.getParameter("value"));
         addAmount(id, value);
-        response.setContentType("text/html");
-        response.getWriter().write("<html><head></head><body>" +
-                "Post(" + id + ")= <b>Success</b></body></html>");
+        //  response.setContentType("text/html");         "Post(" + id + ")= <b>Success</b></body></html>");
+        response.getWriter().write("OK");
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         response.setStatus(200);
-        response.setContentType("text/html");
+        // response.setContentType("text/html");
 
         Integer id = Integer.parseInt(request.getParameter("id"));
-        response.getWriter().write("<html><head></head><body>" +
-                "Get(" + id + ")= <b>" + getAmount(id) + "</b></body></html>");
+        Long result = getAmount(id);
+        response.getWriter().write("Get(" + id + ") = " + (result == null ? 0 : result));
     }
 
     public Long getAmount(Integer id) {
