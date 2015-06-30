@@ -1,12 +1,14 @@
 package com.freemahn.DAO;
 
 /**
- * Created by freeemahn on 27.06.15.
+ * Created by Freemahn on 27.06.15.
  */
 
 import com.freemahn.DAO.Impl.AccountServiceImpl;
-import com.freemahn.logic.AccountService;
 
+/**
+ * Singleton for AccountService
+ */
 public class Factory {
 
     private static AccountService accountService = null;

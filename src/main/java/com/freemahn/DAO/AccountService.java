@@ -1,4 +1,4 @@
-package com.freemahn.logic;
+package com.freemahn.DAO;
 
 /**
  * Created by Freemahn on 26.06.2015.

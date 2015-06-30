@@ -10,12 +10,12 @@
 
     <servlet>
         <servlet-name>AccountServlet</servlet-name>
-        <servlet-class>com.freemahn.AccountServlet</servlet-class>
+        <servlet-class>com.freemahn.servlets.AccountServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>StatsServlet</servlet-name>
-        <servlet-class>com.freemahn.StatsServlet</servlet-class>
+        <servlet-class>com.freemahn.servlets.ZeroStatsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AccountServlet</servlet-name>

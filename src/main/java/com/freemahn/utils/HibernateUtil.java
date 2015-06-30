@@ -1,4 +1,4 @@
-package com.freemahn.persistence;
+package com.freemahn.utils;
 
 /**
  * Created by freeemahn on 27.06.15.
@@ -17,7 +17,6 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            // Создает сессию с hibernate.cfg.xml
             Configuration configuration = new Configuration();
             configuration.configure();
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
@@ -33,8 +32,4 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    public static void shutdown() {
-        // Чистит кеш и закрывает соединение с БД
-        getSessionFactory().close();
-    }
 }

@@ -6,9 +6,15 @@ package com.freemahn.entity;
 
 import java.io.Serializable;
 
+/**
+ * This class represents records in db
+ */
+
 public class Account implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+
     private Integer id;
     private Long value;
 
@@ -23,10 +29,6 @@ public class Account implements Serializable {
         this.value = value;
     }
 
-    public Account(Account a) {
-        id = a.getId();
-        value = a.getValue();
-    }
 
     public Integer getId() {
         return id;
