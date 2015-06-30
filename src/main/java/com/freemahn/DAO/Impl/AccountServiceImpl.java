@@ -20,7 +20,7 @@ public class AccountServiceImpl implements com.freemahn.logic.AccountService {
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
             Account acc = (Account) session.get(Account.class, id);
-            JOptionPane.showMessageDialog(null,acc==null, "Account==null?", JOptionPane.OK_OPTION);
+          //  JOptionPane.showMessageDialog(null,acc==null, "Account==null?", JOptionPane.OK_OPTION);
             if (acc == null)
                 session.save(new Account(id, value));
             else {

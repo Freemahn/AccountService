@@ -12,8 +12,18 @@
         <servlet-name>AccountServlet</servlet-name>
         <servlet-class>com.freemahn.AccountServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>StatsServlet</servlet-name>
+        <servlet-class>com.freemahn.StatsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AccountServlet</servlet-name>
         <url-pattern>/get</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>StatsServlet</servlet-name>
+        <url-pattern>/zeroStats</url-pattern>
     </servlet-mapping>
 </web-app>

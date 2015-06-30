@@ -9,26 +9,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 /**
  * Created by Freemahn on 26.06.2015.
  */
 public class AccountServlet extends HttpServlet implements AccountService {
+
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         Long value = Long.parseLong(request.getParameter("value"));
         addAmount(id, value);
-        //  response.setContentType("text/html");         "Post(" + id + ")= <b>Success</b></body></html>");
         response.getWriter().write("OK");
-
+        Statistics.addCount++;
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        response.setStatus(200);
-        // response.setContentType("text/html");
-
         Integer id = Integer.parseInt(request.getParameter("id"));
         Long result = getAmount(id);
-        response.getWriter().write("Get(" + id + ") = " + (result == null ? 0 : result));
+        response.getWriter().write("" + (result == null ? 0 : result));
+        Statistics.getCount++;
     }
 
     public Long getAmount(Integer id) {
